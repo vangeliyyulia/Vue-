@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-on:input="changeName">
+        <h1>Hello {{ name }}</h1>
+        <hr>
+        <h2>{{ title }} : {{ counter }}</h2>
+        <button v-on:click="riseCounter(5, 'Изменено на 5', $event)">Увеличить на 5</button>
+        <button v-on:click="riseCounter(10, 'Изменено на 10', $event)">Увеличить на 10</button>
+        <hr>
+        <span v-on:mouseover="hoverOver">Наведи на меня</span>
+        <hr>
+        <input type="text" v-on:keyup.enter="alertValue">
+        <hr>
+        <div class="circle" @click="isActive = !isActive" 
+                            :class="{ 'red': isActive, 'green': !isActive }"></div>
+    </div>
+
+    <style>
+        .circle {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .green {
+            background-color: green;
+        }
+    </style>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    
+</body>
+</html>
