@@ -27,3 +27,27 @@ new Vue({
         }
     }
 });
+
+var vue1 = new Vue ({
+    el: '#app2',
+    data: {
+        title: 'Hello I am Vue!'
+    }
+});
+
+new Vue ({
+    el: '#app3',
+    data: {
+        title: 'Hello from Vue 2',
+        name: 'Change me'
+    },
+    methods: {
+        updateFirstTitle: function() {
+            vue1.title = 'Updated from the Second App'
+        },
+        updateName: function() {
+            this.name = 'New Title!';
+            this.$refs.heading.style.color = 'red';
+        }
+    }
+});

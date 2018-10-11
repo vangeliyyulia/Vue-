@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Основы Vue.js. Часть 2</title>
+</head>
+<body>
+    <div id="app2">
+        <h2>{{ title }}</h2>
+        <button @click="title = 'Updated title'">Updated title</button>
+    </div>
+    <div id="app3">
+        <h2>{{ title }}</h2>
+        <button @click="title = updateFirstTitle()">Update first title</button>
+        <h2 ref="heading">{{ name }}</h2>
+        <button @click="title = updateName()">Change it</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
