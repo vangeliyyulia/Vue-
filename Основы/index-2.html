@@ -17,6 +17,10 @@
         <h2 ref="heading">{{ name }}</h2>
         <button @click="title = updateName()">Change it</button>
     </div>
+    <div id="app4">
+        <my-counter v-for="c in 2" ></my-counter>
+    </div>
+   
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="script.js"></script>

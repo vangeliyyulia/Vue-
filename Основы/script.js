@@ -51,3 +51,26 @@ new Vue ({
         }
     }
 });
+
+Vue.component('my-counter', {
+    template: `
+        <div style="border: 1px solid black; padding: 10px">
+            <h2>Counter: {{ counter }}</h2>
+            <button @click="add">Add to counter</button>
+        </div>
+    `,
+    data: function() {
+        return {
+            counter: 0
+        }
+    },
+    methods: {
+        add: function() {
+            this.counter++;
+        }
+    }
+});
+
+new Vue ({
+    el: '#app4'
+})
